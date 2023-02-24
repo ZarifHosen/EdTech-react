@@ -8,6 +8,7 @@ import CourseWebsite from "./pages/CourseWebsite";
 import MobileView from "./pages/MobileView";
 import TabView from "./pages/TabView";
 import { useEffect } from "react";
+// import "./App.css";
 
 function App() {
   const action = useNavigationType();
@@ -54,13 +55,15 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<CourseWebsite />} />
+    <div className="container">
+      <Routes>
+        <Route path="/" element={<CourseWebsite />} />
 
-      <Route path="/mobile-view" element={<MobileView />} />
+        <Route path="/mobile-view" element={<MobileView />} />
 
-      <Route path="/tab-view" element={<TabView />} />
-    </Routes>
+        <Route path="/tab-view" element={<TabView />} />
+      </Routes>
+    </div>
   );
 }
 export default App;
